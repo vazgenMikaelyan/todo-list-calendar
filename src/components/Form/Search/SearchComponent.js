@@ -3,12 +3,13 @@ import React from 'react';
 import './SearchComponent.css'
 import { ReactComponent as SearchIcon } from './search-Icon.svg';
 
-function SearchComponent() {
+function SearchComponent(props) {
 
     const handleSubmit = (e) => {
+        e.preventDefault();
         const formData = new FormData(e.currentTarget);
-        if (!formData.get('q')) {
-            e.preventDefault();
+        if (formData.get('q')) {
+            props.onSearch(formData.get('q'));
         }
     };
 

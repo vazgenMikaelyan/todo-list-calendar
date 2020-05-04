@@ -17,10 +17,14 @@ function HomePageComponent(props) {
         props.history.push('/todos');
     }
 
+    function onSearch(q) {
+        props.history.push(`/todos?q=${q}`);
+    }
+
     return (
         <React.Fragment>
             <HeaderComponent todoList={todoList} />
-            <SearchComponent />
+            <SearchComponent onSearch={onSearch}/>
             <section className="content">
                 <CalendarComponent year={2020} month={5} todos={todoList} onDaySelect={onDaySelect} />
             </section>
