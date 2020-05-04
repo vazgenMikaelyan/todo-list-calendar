@@ -3,7 +3,7 @@
  ## Installation
  
 ```bash
-git clone https://vazgenmikaelyan.github.io/todo-list-calendar/
+git clone https://github.com/vazgenMikaelyan/todo-list-calendar.git
 cd todo-list-calendar
 npm install
 npm start
